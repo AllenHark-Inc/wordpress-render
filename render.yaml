@@ -1,13 +1,13 @@
 services:
 - type: web
-  name: wordpress
+  name: betiq
   env: docker
   plan: standard
   autoDeploy: false
   disk:
-    name: wordpress
+    name: betiq
     mountPath: /var/www/html
-    sizeGB: 20
+    sizeGB: 10
   envVars:
   - key: WORDPRESS_DB_HOST
     fromService:
@@ -38,7 +38,7 @@ services:
   disk:
     name: mysql-wordpress
     mountPath: /var/lib/mysql
-    sizeGB: 20
+    sizeGB: 10
   envVars:
   - key: MYSQL_DATABASE
     value: mysql
